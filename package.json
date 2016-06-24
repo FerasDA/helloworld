@@ -1,0 +1,38 @@
+{
+  "name": "HelloWorldBot",
+  "version": "0.0.1",
+  "description": "A Twitter bot that tweets hello world in different languages",
+  "main": "helloworldbot.js",
+  "dependencies": {
+    "twit": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node helloworldbot.js",
+    "test": "node helloworldbot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FerasDA/helloworldbot.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "twitter",
+    "bot",
+    "hello",
+    "world",
+    "Feras",
+    "Deiratany"
+  ],
+  "author": {
+    "name": "Feras Deiratany",
+    "email": "feras@deiratany.com",
+    "url": "http://ferasdeiratany.com"
+    },
+  "license": "SEE LICENSE IN <https://github.com/FerasDA/helloworldbot/blob/master/LICENSE>",
+  "bugs": {
+    "url": "https://github.com/FerasDA/helloworldbot/issues"
+  },
+  "homepage": "http://ferasdeiratany.com/helloworldbot"
+}
