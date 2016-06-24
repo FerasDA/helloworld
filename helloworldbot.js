@@ -14,6 +14,43 @@ var T = new Twit({
 
 console.log('hello world bot is running...');
 
+const fs = require('fs');
+
+function getTweet() {
+    var letterFolder = randomFolder();
+    var folderPath = __dirname + '/hello-world/' + letterFolder + '/';
+    
+    fs.readdir(folderPath, function (err, files) {
+        if (err) {
+            throw err;
+        }
+        var file = randomFile(files);
+        var hashtag = getHashtag(file);
+
+        console.log("Today's tweet is from the #" + hashtag + " language; file: " + file);
+
+        var filePath = __dirname + '/hello-world/' + letterFolder + '/' + file;
+        var content;
+        fs.readFile(filePath, 'utf8', function read(err, data) {
+            if (err) {
+                throw err;
+            }
+            content = data + ' #' + hashtag;
+            console.log(content);
+            tweet(content);
+        });
+    });
+}
+    
+
+   
+function tweet(content) {
+    T.post('statuses/update', { status: content }, function(err, data, response) {
+        console.log(data)
+    })
+}
+
+
 function randomFolder() {
     var possible = "#abcdefghijklmnopqrstuvwxyz";
     return possible.charAt(Math.floor(Math.random() * possible.length));
@@ -26,3 +63,5 @@ function randomFile(files) {
 function getHashtag(file) {
     return file.replace(/\.[^/.]+$/, "");
 }
+
+getTweet();
