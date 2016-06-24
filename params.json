@@ -1,0 +1,6 @@
+{
+  "name": "Helloworldbot",
+  "tagline": "A simple twitter bot that tweets \"Hello World\" in different programming languages.",
+  "body": "# Hello World Bot\r\n\r\nA simple twitter bot that tweets \"Hello World\" in different programming languages. \r\n\r\nLanguage examples used from the [hello-world](https://github.com/leachim6/hello-world) project.\r\n\r\n## Installation\r\n\r\n`git clone git@github.com:FerasDA/helloworldbot.git`\r\n\r\n## Usage\r\n\r\n1. Run `npm install` to download dependencies.\r\n2. Create a [twitter application](https://apps.twitter.com/app/new) and get tokens/keys.\r\n3. Open `helloworldbot.js` and replace the twitter keys/tokens with your own.\r\n4. Set up a [cron job](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-on-a-vps) to schedule tweets. \r\n  e.g. (run everyday at 5pm): `* 17 * * * node helloworldbot.js`\r\n\r\n\r\n## Credits\r\n\r\nHello World Bot is written in [node.js](https://nodejs.org/en/) and uses Twitter API Client [twit](https://github.com/ttezel/twit) and generates tweets from the [hello-world](https://github.com/leachim6/hello-world) project.\r\n\r\nWritten by [Feras Deiratany](http://ferasdeiratany.com)\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
