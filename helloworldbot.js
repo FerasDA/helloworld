@@ -13,3 +13,16 @@ var T = new Twit({
 });
 
 console.log('hello world bot is running...');
+
+function randomFolder() {
+    var possible = "#abcdefghijklmnopqrstuvwxyz";
+    return possible.charAt(Math.floor(Math.random() * possible.length));
+}
+
+function randomFile(files) {
+    return files[Math.floor(Math.random() * files.length)];
+}
+
+function getHashtag(file) {
+    return file.replace(/\.[^/.]+$/, "");
+}
